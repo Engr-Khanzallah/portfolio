@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Engr Khanzallah | MERN Stack Developer</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">KZ</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>KZ<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> Available for Work
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-title">Engr<span class="accent"> Khanzallah</span></span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">&lt;</span>
+        <span class="role-text" id="role-text"></span>
+        <span class="cursor-blink">|</span>
+        <span class="role-suffix">/&gt;</span>
+      </div>
+      <p class="hero-desc">
+        Crafting powerful, scalable full-stack web applications with the MERN ecosystem.
+        Turning ideas into digital realities — one component at a time.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Hire Me
+        </a>
+        <!-- ✅ DOWNLOAD CV BUTTON -->
+        <a href="resume.pdf" download="Engr-Khanzallah-Resume.pdf" class="btn btn-download">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="2">0</span>+
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="6">0</span>+
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="2">0</span>+
+          <span class="stat-label">Years Coding</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ HERO VISUAL WITH PHOTO -->
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-ring ring1"></div>
+        <div class="avatar-ring ring2"></div>
+        <div class="avatar-ring ring3"></div>
+        <!-- ✅ Photo replaces KZ text -->
+        <div class="avatar-core">
+          <img src="profile.jpg" alt="Engr Khanzallah" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <span class="photo-fallback">KZ</span>
+        </div>
+        <div class="floating-icon icon1"><i class="fab fa-react"></i></div>
+        <div class="floating-icon icon2"><i class="fab fa-node-js"></i></div>
+        <div class="floating-icon icon3"><i class="fas fa-database"></i></div>
+        <div class="floating-icon icon4"><i class="fab fa-js-square"></i></div>
+        <div class="floating-icon icon5"><i class="fab fa-css3-alt"></i></div>
+        <div class="floating-icon icon6"><i class="fab fa-html5"></i></div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section-header">
+      <span class="section-tag">// 01. WHO AM I</span>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass-card reveal">
+        <div class="about-avatar-box">
+          <!-- ✅ Photo in about section -->
+          <div class="about-avatar">
+            <img src="profile.jpg" alt="Engr Khanzallah" class="about-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="photo-fallback-about">KZ</span>
+          </div>
+          <div class="about-glow"></div>
+        </div>
+        <div class="about-social">
+          <a href="https://github.com/Engr-Khanzallah" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/feed/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:khanzallah2839@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+        </div>
+        <!-- ✅ Download CV in about card -->
+        <a href="resume.pdf" download="Engr-Khanzallah-Resume.pdf" class="btn btn-download" style="margin-top:1.2rem; width:100%; justify-content:center;">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+      <div class="about-text reveal">
+        <h3 class="about-name">Engr Khanzallah</h3>
+        <p class="about-role-badge">MERN Stack Developer</p>
+        <p class="about-bio">
+          I'm a passionate <strong>MERN Stack Developer</strong> currently pursuing my
+          <strong>BS in Software Engineering</strong> at Gomal University (Batch 2023–2027).
+          I specialize in building dynamic, responsive, and scalable web applications
+          using <strong>MongoDB, Express.js, React, and Node.js</strong>.
+        </p>
+        <p class="about-bio">
+          I love transforming complex problems into elegant digital solutions. From
+          pixel-perfect frontends to robust backend APIs — I bring ideas to life with
+          clean, efficient code and modern best practices.
+        </p>
+        <div class="about-info-grid">
+          <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Pakistan</span></div>
+          <div class="info-item"><i class="fas fa-graduation-cap"></i><span>BS Software Engineering</span></div>
+          <div class="info-item"><i class="fas fa-envelope"></i><span>khanzallah2839@gmail.com</span></div>
+          <div class="info-item"><i class="fas fa-code"></i><span>Full Stack Developer</span></div>
+        </div>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem; display:inline-flex;">
+          <i class="fas fa-paper-plane"></i> Let's Connect
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="section-header">
+      <span class="section-tag">// 02. WHAT I KNOW</span>
+      <h2 class="section-title">My <span class="accent">Skills</span></h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-laptop-code"></i> Frontend</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon"><i class="fab fa-react"></i></div><span class="skill-name">React.js</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div><span class="skill-percent">85%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fab fa-js-square"></i></div><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div><span class="skill-percent">88%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fab fa-html5"></i></div><span class="skill-name">HTML5</span><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div><span class="skill-percent">95%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><span class="skill-name">CSS3</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div><span class="skill-percent">90%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fas fa-wind"></i></div><span class="skill-name">Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div><span class="skill-percent">82%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fab fa-bootstrap"></i></div><span class="skill-name">Bootstrap</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div><span class="skill-percent">85%</span></div>
+        </div>
+      </div>
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-server"></i> Backend & Database</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon"><i class="fab fa-node-js"></i></div><span class="skill-name">Node.js</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fas fa-network-wired"></i></div><span class="skill-name">Express.js</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div><span class="skill-percent">78%</span></div>
+          <div class="skill-card"><div class="skill-icon"><i class="fas fa-database"></i></div><span class="skill-name">MongoDB</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div><span class="skill-percent">80%</span></div>
+        </div>
+      </div>
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="fab fa-github"></i> GitHub</span>
+          <span class="tech-badge"><i class="fas fa-code-branch"></i> Git</span>
+          <span class="tech-badge"><i class="fas fa-cube"></i> VS Code</span>
+          <span class="tech-badge"><i class="fas fa-globe"></i> Netlify</span>
+          <span class="tech-badge"><i class="fas fa-terminal"></i> REST API</span>
+          <span class="tech-badge"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="section-header">
+      <span class="section-tag">// 03. WHAT I'VE BUILT</span>
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-top">
+          <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+          <div class="project-links">
+            <a href="https://al-hashmi-khushbo-center.netlify.app/" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/Engr-Khanzallah" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Al-Hashmi Khushbo Center</h3>
+        <p class="project-desc">A fully functional e-commerce website for a fragrance brand. Features product catalog, shopping cart, user-friendly navigation, and modern responsive design optimized for all devices.</p>
+        <div class="project-tags"><span class="proj-tag">React.js</span><span class="proj-tag">Node.js</span><span class="proj-tag">MongoDB</span><span class="proj-tag">Express</span><span class="proj-tag">CSS3</span></div>
+        <a href="https://al-hashmi-khushbo-center.netlify.app/" target="_blank" class="project-live-btn"><i class="fas fa-rocket"></i> Live Demo</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-top">
+          <div class="project-icon"><i class="fas fa-hospital"></i></div>
+          <div class="project-links"><a href="https://github.com/Engr-Khanzallah" target="_blank" class="proj-link"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3 class="project-title">Hospital Management Website</h3>
+        <p class="project-desc">A comprehensive hospital web platform featuring doctor listings, appointment booking, patient information management, and admin dashboard with clean UI and seamless user experience.</p>
+        <div class="project-tags"><span class="proj-tag">React.js</span><span class="proj-tag">Node.js</span><span class="proj-tag">MongoDB</span><span class="proj-tag">Express</span><span class="proj-tag">Bootstrap</span></div>
+        <a href="https://github.com/Engr-Khanzallah" target="_blank" class="project-live-btn"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+      <div class="project-card project-coming reveal">
+        <div class="coming-icon"><i class="fas fa-code"></i></div>
+        <h3 class="project-title">More Projects Coming Soon</h3>
+        <p class="project-desc">Currently working on exciting new projects. Stay tuned and follow my GitHub for updates!</p>
+        <a href="https://github.com/Engr-Khanzallah" target="_blank" class="project-live-btn"><i class="fab fa-github"></i> Follow on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section education" id="education">
+    <div class="section-header">
+      <span class="section-tag">// 04. MY JOURNEY</span>
+      <h2 class="section-title">My <span class="accent">Education</span></h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="edu-header">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div><h3 class="edu-degree">Bachelor of Science — Software Engineering</h3><p class="edu-uni">Gomal University, D.I. Khan</p></div>
+          </div>
+          <div class="edu-meta"><span class="edu-year"><i class="far fa-calendar-alt"></i> 2023 — 2027</span><span class="edu-status active">In Progress</span></div>
+          <p class="edu-desc">Studying core CS fundamentals including Data Structures, Algorithms, Database Systems, Software Engineering practices, and Web Development. Actively building real-world projects alongside academics.</p>
+          <div class="edu-subjects"><span class="subject-tag">Data Structures</span><span class="subject-tag">Algorithms</span><span class="subject-tag">Database Systems</span><span class="subject-tag">Web Development</span><span class="subject-tag">OOP</span><span class="subject-tag">Software Engineering</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="edu-header">
+            <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
+            <div><h3 class="edu-degree">MERN Stack Development</h3><p class="edu-uni">Self-Taught / Online Learning</p></div>
+          </div>
+          <div class="edu-meta"><span class="edu-year"><i class="far fa-calendar-alt"></i> 2023 — Present</span><span class="edu-status active">Ongoing</span></div>
+          <p class="edu-desc">Continuously learning and mastering the MERN stack through online courses, documentation, and hands-on project building. Proficient in React, Node.js, Express.js, MongoDB, and modern CSS frameworks.</p>
+          <div class="edu-subjects"><span class="subject-tag">React.js</span><span class="subject-tag">Node.js</span><span class="subject-tag">MongoDB</span><span class="subject-tag">Express.js</span><span class="subject-tag">Tailwind CSS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section-header">
+      <span class="section-tag">// 05. GET IN TOUCH</span>
+      <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Let's Build Something <span class="accent">Amazing</span></h3>
+        <p>I'm currently open to freelance projects, collaborations, and full-time opportunities. Feel free to reach out!</p>
+        <div class="contact-cards">
+          <a href="mailto:khanzallah2839@gmail.com" class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div><span class="contact-card-label">Email</span><span class="contact-card-value">khanzallah2839@gmail.com</span></div>
+          </a>
+          <a href="https://github.com/Engr-Khanzallah" target="_blank" class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+            <div><span class="contact-card-label">GitHub</span><span class="contact-card-value">github.com/Engr-Khanzallah</span></div>
+          </a>
+          <a href="https://www.linkedin.com/feed/" target="_blank" class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-linkedin"></i></div>
+            <div><span class="contact-card-label">LinkedIn</span><span class="contact-card-value">Connect with me</span></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ✅ REAL EMAIL FORM -->
+      <form class="contact-form glass-card reveal" id="contact-form">
+        <h3>Send a <span class="accent">Message</span></h3>
+        <div class="form-group">
+          <input type="text" id="from_name" name="from_name" placeholder="Your Name" required />
+          <label for="from_name">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="from_email" name="from_email" placeholder="Your Email" required />
+          <label for="from_email">Your Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" placeholder="Subject" />
+          <label for="subject">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div class="form-success" id="form-success">
+          <i class="fas fa-check-circle"></i> Message sent to Khanzallah successfully!
+        </div>
+        <div class="form-error" id="form-error">
+          <i class="fas fa-exclamation-circle"></i> Failed to send. Please email directly.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo"><span class="logo-bracket">&lt;</span>KZ<span class="logo-bracket">/&gt;</span></div>
+      <p class="footer-text">Designed & Built by <span class="accent">Engr Khanzallah</span></p>
+      <p class="footer-sub">MERN Stack Developer | Gomal University</p>
+      <div class="footer-social">
+        <a href="https://github.com/Engr-Khanzallah" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:khanzallah2839@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">© 2024 Engr Khanzallah. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
