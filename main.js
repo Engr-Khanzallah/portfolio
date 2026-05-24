@@ -87,7 +87,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ============ TYPING EFFECT ============
-const roles = ['MERN Stack Developer', 'React.js Developer', 'Node.js Backend Dev', 'Full Stack Engineer', 'Software Engineer'];
+const roles = [ 'Full Stack Engineer'];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const roleEl = document.getElementById('role-text');
 
