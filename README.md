@@ -30,6 +30,7 @@ https://engr-khanzallah.github.io/portfolio
 - Features: Product catalog, shopping cart, responsive design
 
 ### 2. Hospital Management Website
+//Live :https://medicare-hospital-app.netlify.app
 - 🔗 GitHub: https://github.com/Engr-Khanzallah
 - 🏥 Doctor listings, appointment booking, admin dashboard
 
