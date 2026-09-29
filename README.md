@@ -34,6 +34,12 @@ https://engr-khanzallah.github.io/portfolio
 - 🔗 GitHub: https://github.com/Engr-Khanzallah
 - 🏥 Doctor listings, appointment booking, admin dashboard
 
+### 3.School Management System
+//Live: https://schoolmanagementsystm.netlify.app/login
+
+🔗 GitHub: https://github.com/Engr-Khanzallah
+🏥 Students,Teachers admin dashboard
+
 ---
 
 ## 🛠️ Tech Stack
